@@ -1,12 +1,12 @@
-const {
-    LOAD_USER,
-    SUCC_USER,
-    FAIL_USER,
-    CURRENT_USER,
-    LOGOUT_USER,
-    GET_USERS,
-    DELETE_USER,
-  } = require("../ActionTypes/user");
+import {
+  CURRENT_USER,
+  DELETE_USER,
+  FAIL_USER,
+  GET_USERS,
+  LOAD_USER,
+  LOGOUT_USER,
+  SUCC_USER,
+} from "../ActionTypes/user";
   
   //initialState
   const initialState = {
@@ -52,7 +52,9 @@ const {
           loadUser: false,
           listUsers: payload.listUsers,
         };
-      case DELETE_USER:
+
+
+      case DELETE_USER:{
         const updatedListUsers = state.listUsers.filter(
           (user) => user._id !== payload
         );
@@ -60,9 +62,11 @@ const {
           ...state,
           loadUser: false,
           listUsers: updatedListUsers,
-        };
+        }}
       default:
         return state;
+      
     }
   };
+
   export default userReducer;
