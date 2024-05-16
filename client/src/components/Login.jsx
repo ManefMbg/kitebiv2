@@ -2,13 +2,14 @@ import { useState } from "react";
 import "../CSS/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {useDispatch} from "redux"
+// import {useSelector} from "redux"
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  // const isAdmin = useSelector(state=>state.userReducer.isAdmin)
   // const dispatch = useDispatch()
 
   const signupSubmit = async (e) => {
