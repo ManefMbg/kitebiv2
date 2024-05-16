@@ -12,6 +12,7 @@ router.post('/login', async (req, res) => {
         res.sendStatus(403)
     }
     res.json(user)
+    console.log("Successful")
 
 }) 
 
