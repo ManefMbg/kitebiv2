@@ -4,11 +4,12 @@ import Navbar from './components/Navbar'
 import Books from './components/Books'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
+import AddBook from './components/AddBook'
+
+
 
 
 function App() {
- 
-
   return (
     <BrowserRouter>
     <Navbar/>
@@ -17,6 +18,7 @@ function App() {
       <Route path='/books' element={<Books/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/dashboard' element={<Dashboard/>}></Route>
+      <Route path='/dashboard' element={<AddBook/>}></Route>
       </Routes>
       </BrowserRouter>
   )

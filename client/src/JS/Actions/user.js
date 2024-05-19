@@ -75,17 +75,4 @@ export const login = (user) => async (dispatch) => {
 //   }
 // };
 
-// export const deleteUser = (userId) => async (dispatch) => {
-//   dispatch({ type: LOAD_USER });
-//   try {
-//     const config = {
-//       headers: {
-//         authorization: localStorage.getItem("token"),
-//       },
-//     };
-//     await axios.delete(`/auth/user/${userId}`, config);
-//     dispatch({ type: DELETE_USER, payload: userId });
-//   } catch (error) {
-//     dispatch({ type: FAIL_USER, payload: error.response.data.errors });
-//   }
-// };
+

@@ -1,41 +1,31 @@
 import { useState } from "react";
 import "../CSS/Login.css";
-import axios from "axios";
+import { login, register } from "../JS/Actions/user"
 import { useNavigate } from "react-router-dom";
-// import {useSelector} from "redux"
+import { useDispatch } from "react-redux";
 
-const Login = () => {
+
+const Login = ({setRole}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // const isAdmin = useSelector(state=>state.userReducer.isAdmin)
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
+  
   const signupSubmit = async (e) => {
     e.preventDefault();
-    try {
-      console.log(username, email, password);
-      const result = await axios.post("http://localhost:3001/auth/signup", { username, email, password });
-      navigate("/login"); 
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(register({ username, email, password }))
+    localStorage.getItem('token')?
+    navigate('/'): navigate('/login')
+
   };
 
   const loginSubmit = async (e) => {
     e.preventDefault();
-    try {
-      console.log(username, email, password);
-      const result = await axios.post("http://localhost:3001/auth/login", {email,password})
-      navigate("/")
-      console.log(result);
-    } catch (error) {
-      console.log(error)
-    }
-
-    // dispatch{login{(email,password)}}
+    dispatch(login({ email, password }))
+    localStorage.getItem('token')?
+    navigate('/'): navigate('/login')
 
   }
 
