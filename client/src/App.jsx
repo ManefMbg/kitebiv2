@@ -1,10 +1,10 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
-import Books from './components/Books'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
-import AddBook from './components/AddBook'
+import Books from './components/Books'
+
 
 
 
@@ -16,9 +16,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/books' element={<Books/>}></Route>
-      <Route path='/login' element={<Login/>}></Route>
       <Route path='/dashboard' element={<Dashboard/>}></Route>
-      <Route path='/dashboard' element={<AddBook/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
       </Routes>
       </BrowserRouter>
   )

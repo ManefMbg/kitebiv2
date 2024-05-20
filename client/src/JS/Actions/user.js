@@ -1,5 +1,7 @@
 import axios from "axios";
-import { CURRENT_USER, DELETE_USER, FAIL_USER, GET_USERS, LOAD_USER, LOGOUT_USER, SUCC_USER} from "../ActionTypes/user";
+import {FAIL_USER, LOAD_USER, LOGOUT_USER, SUCC_USER} from "../ActionTypes/user";
+
+
 
 export const register = (newUser) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
@@ -10,6 +12,8 @@ export const register = (newUser) => async (dispatch) => {
     dispatch({ type: FAIL_USER, payload: error.response.data.errors });
   }
 };
+
+
 
 export const login = (user) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
@@ -34,45 +38,12 @@ export const login = (user) => async (dispatch) => {
   }
 };
 
-// export const current = () => async (dispatch) => {
-//   dispatch({ type: LOAD_USER });
-//   try {
-//     const config = {
-//       headers: {
-//         authorization: localStorage.getItem("token"),
-//       },
-//     };
-//     let result = await axios.get("/api/user/current", config);
-//     dispatch({ type: CURRENT_USER, payload: result.data });
-//   } catch (error) {
-//     dispatch({ type: FAIL_USER, payload: error.response.data.errors });
-//   }
-// };
-// export const logout = () => async (dispatch) => {
-//   dispatch({ type: LOGOUT_USER });
-// };
+export const logout = () => (dispatch) => {
+  dispatch({ type: LOGOUT_USER });
+};
 
 
 
-// export const Users = () => async (dispatch) => {
-//   dispatch({ type: LOAD_USER });
-//   try {
-//     const token = localStorage.getItem("token");
-//     const config = {
-//       headers: {
-//         Authorization: token ? token : "", // Add the Authorization header if token is present
-//       },
-//     };
 
-//     let response = await axios.get("api/user/allUsers", config);
-
-//     let listUsers = response.data;
-//     console.log(listUsers);
-
-//     dispatch({ type: GET_USERS, payload: listUsers });
-//   } catch (error) {
-//     dispatch({ type: FAIL_USER, payload: error.response.data.errors });
-//   }
-// };
 
 

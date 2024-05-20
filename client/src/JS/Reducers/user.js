@@ -40,6 +40,7 @@ import {
           isAuth: true,
           isAdmin: payload.isAdmin,
         };
+        
       case LOGOUT_USER:
         localStorage.removeItem("token");
         return { user: null, loadUser: false, errors: [], isAuth: false };

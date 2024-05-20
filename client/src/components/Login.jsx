@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 
-const Login = ({setRole}) => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,12 +23,11 @@ const Login = ({setRole}) => {
 
   const loginSubmit = async (e) => {
     e.preventDefault();
-    dispatch(login({ email, password }))
+    await dispatch(login({ email, password }))
     localStorage.getItem('token')?
     navigate('/'): navigate('/login')
 
   }
-
 
   return (
     <div className="body">
