@@ -3,7 +3,7 @@ import BookCard from "./BookCard"
 
 const BookList = (props) => {
   return (
-    <div className='list'>
+    <div className='card-container'>
         {
             props.books.map((book, i) => {
                 return <BookCard
@@ -12,6 +12,7 @@ const BookList = (props) => {
                     title={book.volumeInfo.title}
                     author={book.volumeInfo.authors}
                     published={book.volumeInfo.publishedDate}
+                    previewLink={book.volumeInfo.previewLink}
                 />
             })
         }

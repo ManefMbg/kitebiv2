@@ -2,6 +2,7 @@ import express from "express";
 import { User } from "../models/User.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
+import isAuth from "../middleware/isAuth.js"
 
 const router = express.Router();
 
@@ -59,5 +60,10 @@ router.post("/login", async (req, res) => {
     res.status(400).send({ msg: "User can not login!!!" });
   }
 });
+
+router.get('/current',isAuth, (req, res) => {
+  res.send(req.user);
+});
+
 
 export { router as AdminRouter };

@@ -3,35 +3,61 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px auto; 
-    max-width: 100%;
+    margin: 50px 80px;
+    max-width: auto;
+    
   }
 
-  .desc {
-    width: 80%; 
-    margin-bottom: 20px; /* Adjust margin as needed */
-    background-color: #f9f9f9;
+  .desc  {
+    width: calc(25% - 30px); 
+    margin-bottom: 30px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 13px 30px 0px ;
+    
+
   }
 
+/* Style for book cover */
+  #book-image {
+  margin-left: 25%;
+  margin-bottom: 10px;
+  
+}
+  
+
+/* Style for book title */
   #book-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   /* Style for book author */
   #book-author {
     font-size: 14px;
     color: #666;
+    text-align: center;
   }
   
-  /* Style for book description */
+  /* Style for book publish */
   #book-published {
     font-size: 14px;
     color: #333;
     margin-top: 10px;
+    text-align: center;
   }
+
+  #book-preview {
+    text-align: center;
+    background-color: purple;
+    
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import '../CSS/Navbar.css'
 import { useDispatch, useSelector } from "react-redux";
 import {logout}  from '../JS/Actions/user';
+import { useEffect } from 'react';
+import {current} from '../JS/Actions/user'
 
 const Navbar = () => {
 
@@ -13,18 +15,26 @@ const handleLogout = () => {
     dispatch(logout());
 };
 
+useEffect(() => {
+  if (localStorage.getItem('token')) { dispatch(current()) }
+  
+}, [dispatch])
+
+
 return (
   <nav className='navbar'>
       <div className='navbar-left'>
           <Link to="/" className='navbar-brand'>Kitebi</Link>
       </div>
       <div className='navbar-right'>
-          <Link to="/books" className='navbar-link'> Books</Link>
     {isAdmin && (     
-          <Link to="/dashboard" className='navbar-link'> Dashboard</Link>
-        )}
+        <Link to="/dashboard" className='navbar-link'> Dashboard</Link>
+    )}
     {isAuth ? (
+            <div>
+            <Link to="/books" className='navbar-link'> Books</Link>
               <Link to="/" onClick={handleLogout} className='navbar-link'>Logout</Link>
+              </div>
       ) : (
       <Link to="/login" className='navbar-link'>Login</Link>
       )}

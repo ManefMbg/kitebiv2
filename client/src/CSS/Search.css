@@ -1,0 +1,9 @@
+.search-area{
+    padding-left: 30rem ;
+    padding-right: 30rem;
+    margin-top: 40px;
+}
+
+#btn{
+    max-width: 100px;
+}

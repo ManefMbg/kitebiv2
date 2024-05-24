@@ -1,0 +1,45 @@
+
+.container{
+    box-sizing: border-box ;
+    margin-top: 60px;
+    margin-left: 20rem;
+    margin-right: 20rem; 
+    
+}
+
+.button{
+    max-width: 60px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 410px;
+    margin-bottom: 20px;
+}
+
+.button-add{
+    background-color: #194064;
+    color: white;
+    
+}
+
+.btn2{
+    max-width: 100px;
+}
+
+.addContainer{
+    padding-bottom: 10px;
+    background-color: blueviolet;
+    border-radius: 10px; 
+}
+
+.addContainer form .close-btn{
+    margin-left: 50rem;
+    padding-top: 13px ;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    cursor: pointer;
+}
