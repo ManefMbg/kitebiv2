@@ -66,4 +66,4 @@ router.get('/current',isAuth, (req, res) => {
 });
 
 
-export { router as AdminRouter };
+export { router as AuthRouter };
