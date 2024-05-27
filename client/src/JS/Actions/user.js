@@ -51,7 +51,7 @@ export const current = () => async (dispatch) => {
         authorization: localStorage.getItem("token"),
       },
     };
-    let result = await axios.get("/api/user/current", config);
+    let result = await axios.get("/auth/current", config);
     dispatch({ type: CURRENT_USER, payload: result.data });
   } catch (error) {
     dispatch({ type: FAIL_USER, payload: error.response.data.errors });

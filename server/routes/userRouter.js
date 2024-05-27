@@ -1,5 +1,4 @@
 import express from "express";
-import { User } from "../models/User.js";
 import {
   deleteUser,
   getOneUser,
@@ -8,6 +7,7 @@ import {
 } from "../controllers/userController.js";
 import isAuth from "../middleware/isAuth.js";
 import isAdmin from "../middleware/isAdmin.js";
+
 const router = express.Router();
 
 router.get("/", getUsers);
