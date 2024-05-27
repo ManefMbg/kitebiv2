@@ -1,13 +1,13 @@
 
-.container{
+/* .container{
     box-sizing: border-box ;
     margin-top: 60px;
     margin-left: 20rem;
     margin-right: 20rem; 
     
-}
+} */
 
-.button{
+/* .button{
     max-width: 60px;
     border: none;
     font-size: 18px;
@@ -42,4 +42,21 @@
     align-items: center;
     color: red;
     cursor: pointer;
+} */
+
+
+.tableContainer table thead tr th{
+    min-width: 300px;
+    padding: 5px;
+
+}
+
+.tableContainer table thead tr{
+    background-color: #a7a1a17e;
+}
+
+.tableContainer{
+    margin-top: 150px ;
+    margin-left: 290px;
+    
 }
