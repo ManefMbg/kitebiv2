@@ -1,41 +1,16 @@
-// import { useState } from "react";
-import  {UserRouter } from "../../../server/routes/userRouter.js";
 import "../CSS/Container.css";
-// import { IoIosCloseCircleOutline } from "react-icons/io";
-import axios from "axios" 
+// import axios from "axios";
+// import {useSelector} from "react-redux"
 
-axios.defaults.baseURL = "http://localhost:3001/"
+
+// axios.defaults.baseURL = "http://localhost:3001/"
 
 const Dashboard = () => {
-
-// const [addSection, setAddSection] = useState(false)
-
-
+    // const listUsers = useSelector((state) => state.userReducer.listUsers)
+    const users = []
 
   return (
     <div className="container">
-        {/* <button className="button button-add" onClick={() =>setAddSection(true)}>Add</button>
-
-{
-  addSection && (
-
-    <div className="addContainer">
-        <form>
-          <div className="close-btn" onClick={() =>setAddSection(false)}><IoIosCloseCircleOutline/></div>
-            <label htmlFor="username">UserName : </label>
-            <input type="text" id="username" name="username" />
-
-            <label htmlFor="email">Email : </label>
-            <input type="email" id="email" name="email" />
-
-            <label htmlFor="password">Password : </label>
-            <input type="text" name="password" id="password" />
-
-            <button className="btn2">Submit</button>
-          </form>
-        </div>
-  )
-} */}
         
         <div className="tableContainer">
             <table>
@@ -48,9 +23,9 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                     {
-                        UserRouter.map((el)=>{
+                        users.map((el)=>{
                             return(
-                                <tr key={el}>
+                                <tr key={el.id}>
                                     <td>{el.username}</td>
                                     <td>{el.email}</td>
                                     <td>
