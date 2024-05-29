@@ -1,13 +1,13 @@
 import "../CSS/Container.css";
-// import axios from "axios";
-// import {useSelector} from "react-redux"
+import axios from "axios";
+import {useSelector} from "react-redux"
 
 
-// axios.defaults.baseURL = "http://localhost:3001/"
+axios.defaults.baseURL = "http://localhost:3001/"
 
 const Dashboard = () => {
-    // const listUsers = useSelector((state) => state.userReducer.listUsers)
-    const users = []
+    const listUsers = useSelector((state) => state.userReducer.listUsers)
+    
 
   return (
     <div className="container">
@@ -23,7 +23,7 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                     {
-                        users.map((el)=>{
+                        listUsers.map((el)=>{
                             return(
                                 <tr key={el.id}>
                                     <td>{el.username}</td>
