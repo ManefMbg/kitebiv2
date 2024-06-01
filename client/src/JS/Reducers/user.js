@@ -51,7 +51,7 @@ import {
         return {
           ...state,
           loadUser: false,
-          listUsers: payload.listUsers,
+          listUsers: payload.data,
         };
 
 

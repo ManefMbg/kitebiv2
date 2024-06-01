@@ -2,11 +2,10 @@ import { User } from "../models/User.js";
 
 
 export const updateUser = async (req, res) => {
-    //   console.log(req.body);
+
     const { ...rest } = req.body;
     const id = req.params.id;
-    // console.log(rest);
-    // console.log(id)
+  
     const data = await User.updateOne({ _id: id }, rest);
     res.send({
         success: true,
@@ -17,7 +16,6 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
-  // console.log(id);
 
   const data = await User.deleteOne({ _id: id });
   res.send({

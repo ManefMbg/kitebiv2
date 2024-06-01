@@ -2,7 +2,7 @@ import "../CSS/Container.css";
 import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUsers } from "../JS/Actions/user";
+import { deleteUser, getUsers, updateUser } from "../JS/Actions/user";
 
 axios.defaults.baseURL = "http://localhost:3001/";
 
@@ -32,8 +32,8 @@ const Dashboard = () => {
                   <td>{el.username}</td>
                   <td>{el.email}</td>
                   <td>
-                    <button className="btn btn-edit">Edit</button>
-                    <button className="btn btn-delete">Delete</button>
+                    <button className="btn btn-edit" onClick={() => updateUser(el.id)}>Edit</button>
+                    <button className="btn btn-delete" onClick={() => deleteUser(el.id)}>Delete</button>
                   </td>
                 </tr>
               );
