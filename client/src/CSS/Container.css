@@ -1,62 +1,26 @@
 
-/* .container{
-    box-sizing: border-box ;
-    margin-top: 60px;
-    margin-left: 20rem;
-    margin-right: 20rem; 
-    
-} */
-
-/* .button{
-    max-width: 60px;
-    border: none;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 410px;
-    margin-bottom: 20px;
-}
-
-.button-add{
-    background-color: #194064;
-    color: white;
-    
-}
-
-.btn2{
-    max-width: 100px;
-}
-
-.addContainer{
-    padding-bottom: 10px;
-    background-color: blueviolet;
-    border-radius: 10px; 
-}
-
-.addContainer form .close-btn{
-    margin-left: 50rem;
-    padding-top: 13px ;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    cursor: pointer;
-} */
-
 
 .tableContainer table thead tr th{
     min-width: 300px;
     padding: 5px;
-
+    color: aliceblue;
+    padding-right: 5rem;
+    padding-left: 20px;
+    
 }
 
 .tableContainer table thead tr{
-    background-color: #a7a1a17e;
+    background-color: #a1a2a77e;
+    color: aliceblue;
+    
 }
 
 .tableContainer{
-    margin-top: 150px ;
-    margin-left: 290px;
-    
+    margin-top: 70px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 60px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 5px;
 }

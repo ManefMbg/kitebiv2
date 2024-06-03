@@ -37,7 +37,7 @@ const Dashboard = () => {
                   <td>{el.username}</td>
                   <td>{el.email}</td>
                   <td>
-                    {/* <button className="btn btn-edit" onClick={() => navigate(`/edit/${el._id}`)}>Edit</button> */}
+              
                     <button className="btn btn-delete" onClick={() => dispatch(deleteUser(el._id))}>Delete</button>
                   </td>
                 </tr>
