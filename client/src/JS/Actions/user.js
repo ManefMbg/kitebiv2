@@ -96,6 +96,7 @@ export const editUser = (id, newUser) => async (dispatch) => {
 //delete contact
 export const deleteUser = (id) => async (dispatch) => {
   try {
+    console.log(id)
     await axios.delete(`/api/user/${id}`);
     dispatch(getUsers());
   } catch (error) {

@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get("/all", getUsers);
 router.get("/:id", getOneUser);
-router.put("/update/:id", isAuth, isAdmin, updateUser);
-router.delete("/delete/:id", deleteUser);
+router.put("/:id", isAuth, updateUser);
+router.delete("/:id", isAdmin, deleteUser);
 
 export { router as UserRouter };

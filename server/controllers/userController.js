@@ -16,7 +16,6 @@ export const updateUser = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
-
   const data = await User.deleteOne({ _id: id });
   res.send({
     success: true,
@@ -24,14 +23,16 @@ export const deleteUser = async (req, res) => {
     data: data,
   });
 };
+
+
 export const getUsers = async (req, res) => {
   const data = await User.find();
   res.json({ success: true, data: data });
 }
+
+
 export const getOneUser = async (req, res) => {
   const id = req.params.id;
-//   console.log(id);
-
   const data = await User.findById({ _id: id });
   res.send({
     success: true,

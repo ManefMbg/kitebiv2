@@ -9,8 +9,10 @@ const Navbar = () => {
 
 const isAuth = useSelector((state) => state.user.isAuth);
 const isAdmin = useSelector((state) => state.user.isAdmin);
-const dispatch = useDispatch();
+const user = useSelector((state) => state.user.user);
 
+
+const dispatch = useDispatch();
 const handleLogout = () => {
     dispatch(logout());
 };
@@ -32,7 +34,8 @@ return (
     )}
     {isAuth ? (
             <div>
-            <Link to="/books" className='navbar-link'> Books</Link>
+              <Link to={`/profile/${user._id}`} className='navbar-link'>Profile</Link>
+              <Link to="/books" className='navbar-link'> Books</Link>
               <Link to="/" onClick={handleLogout} className='navbar-link'>Logout</Link>
               </div>
       ) : (
