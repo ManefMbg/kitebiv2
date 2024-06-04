@@ -23,8 +23,13 @@ Connection();
 app.use("/auth", AuthRouter);
 app.use("/api/user", UserRouter);
 
+app.use((req,res)=>{
+  res.send("API is running...")
+})
 
-const PORT = process.env.PORT 
+
+const PORT = process.env.PORT || 5000
+
 app.listen(PORT, () => {
   console.log("Server is Running");
 });
